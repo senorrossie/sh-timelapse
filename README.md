@@ -4,8 +4,7 @@ A series of scripts to create a timelapse video of still images.
 
 ## Crontab
 
-Crontab file `pi.crontab` needs to be installed as the user that will run this script.
-It will take a snapshot (foto) every minute and every hour it will encode the snapshots taken to a video file.
+The previous method used cron. With the need to take a snapshot more than once per minute, cron is out of the question. Run the snapshot script from rc.local or something similar and run the encode.sh script from /etc/cron.hourly by creating a symlink there (sudo or as root user): `ln -s /home/pi/timelapse/encode.sh /etc/cron.hourly/timelapse_encode`
 
 ## Snapshot
 
