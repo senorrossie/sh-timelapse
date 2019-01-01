@@ -14,10 +14,10 @@ function do_Snapshot() {
 		-l ${WEBDIR}/timelapse.jpg
 }
 
-if [ ! -d "$OUTDIR" ] && [ -z "$OUTDIR" ]; then
+if [ ! -d "$OUTDIR" ] && [ ! -z "$OUTDIR" ]; then
 	mkdir -p $OUTDIR
 fi
-if [ ! -d "$WEBDIR" ] && [ -z "$WEBDIR" ]; then
+if [ ! -d "$WEBDIR" ] && [ ! -z "$WEBDIR" ]; then
 	mkdir -p $WEBDIR
 fi
 
