@@ -17,6 +17,9 @@ if [ -d ${BASEDIR} ]; then
 
 	for IMG in $( cat ${BASEDIR}/timelapse.pls ); do rm -f $IMG ; done
 	chown ${MYUSER}: ${BASEDIR}/*
+else
+	printf "[ERROR] Unable to change to %s!\n" "${BASEDIR}"
+	exit 1
 fi
 
 # Concatenate videos
